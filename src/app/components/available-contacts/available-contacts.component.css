@@ -1,0 +1,58 @@
+.contact-list .mat-list-item {
+  margin-top:0.5rem;
+  border:solid;
+  border-width:0.3px;
+  border-top-width: 0;
+  padding-top:0.2rem;
+  padding-bottom:0.3rem;
+  background-color: #F5F5F5;
+  height:3.5rem;
+}
+
+.mat-list-base{
+	padding-top:0;
+}
+
+mat-card {
+	margin-top:2.5rem;
+	margin-bottom:0.2rem;
+	margin-bottom:0;
+}
+
+.mat-card-title {
+	font-size:1.5rem;
+	font-weight:300;
+	margin-bottom: 1rem;
+}
+
+mat-card-content {
+	font-weight: 300;
+	font-size:1.5rem;
+}
+
+.contact_name {
+	font-weight:300;
+	font-size:0.8rem;
+	text-align: left;
+	margin-left: 1rem;
+}
+
+.mat-list-base .mat-list-item .mat-list-avatar, .mat-list-base .mat-list-option .mat-list-avatar {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #F5F5F5;
+}
+
+mat-list-item {
+	background-color: #84CEC0;
+	margin-bottom:0.2rem;
+}
+.no-contact {
+	font-weight:300;
+	font-size: 1.2rem;
+	padding-top: 2rem;
+	color: #EE8068;
+}

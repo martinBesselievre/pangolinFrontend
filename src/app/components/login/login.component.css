@@ -1,0 +1,41 @@
+mat-card {
+  max-width: 400px;
+  margin: 15vh auto;
+  text-align: center;
+}
+
+.mat-card-title {
+  font-weight:300;
+  text-align: center;
+  width:100%;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.card-header {
+  font-weight:300;
+  font-size:1.5rem;
+  color:#ea4c22;
+  padding-bottom: 1rem;
+}
+
+.register-link{
+  margin-top: 0.5rem;
+}
+
+button{
+  margin-top: 2rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: .75rem 1.25rem;
+}
+

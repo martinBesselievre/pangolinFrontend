@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-content>
+      <div class='card-header'>
+        Localisez vos contacts 
+      </div>
+      <google-map width="100%"
+      	[zoom]="12"
+  		[center]="center"
+  		[options]="options">
+	  		<map-marker
+			    *ngFor="let marker of available_contacts_markers"
+			    [position]="marker.position"
+			    [label]="marker.label"
+			    [title]="marker.title"
+			    [options]="marker.options">
+	  		</map-marker>
+	  		<map-marker
+			    *ngFor="let marker of current_contacts_markers"
+			    [position]="marker.position"
+			    [label]="marker.label"
+			    [title]="marker.title"
+			    [options]="marker.options">
+	  		</map-marker>
+  		</google-map>
+  </mat-card-content>
+</mat-card>
+
+
+

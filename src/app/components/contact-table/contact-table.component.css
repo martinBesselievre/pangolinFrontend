@@ -1,0 +1,15 @@
+.full-width-table {
+  width: 100%;
+}
+
+button {
+	border-color: #EE8068;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+:host ::ng-deep .custom-spinner circle{   
+    stroke: #42bba4;
+}

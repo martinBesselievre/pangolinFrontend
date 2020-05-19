@@ -1,0 +1,23 @@
+<mat-card>
+	<mat-card-title>
+		Mes contacts
+	</mat-card-title>
+	<mat-card-content>
+		<div >
+			<app-contact-table *ngIf=(showTable)
+				[current_contacts]=current_contacts	
+				(table_initialized)="table_initialized_handler()"	
+				(delete_contact)="delete_contact_handler($event)"
+				>	
+			</app-contact-table>
+		</div>
+		<div class="no-contact" *ngIf=(!showTable)>
+			Aucun contact
+		</div>
+	</mat-card-content>
+	<mat-card-actions align="end">
+		<button mat-raised-button (click)=add_contact_handler() color="primary">
+			Ajouter
+		</button>
+    </mat-card-actions>
+</mat-card>

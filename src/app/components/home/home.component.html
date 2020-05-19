@@ -1,0 +1,44 @@
+<div fxLayout="row" fxShow="false" fxShow.gt-sm class='main'>
+	<div fxFlex="70" fxFill class='left'>
+		<div fxLayout="row" fxLayoutAlign="space-around center" class="contacts">
+			<div fxFlex="80" fxFill>
+				<app-current-contacts 
+					(show_radio_buttons)="show_radio_buttons_handler()" 
+					(table_initialized)="table_initialized_handler()" 
+					(delete_contact)="delete_contact_handler($event)" 
+					[current_contacts]=current_contacts>
+				</app-current-contacts>
+			</div>
+		</div>
+	</div>
+	<div fxFlex fxFill class='right'>
+		<app-available-contacts
+			[available_contacts]=available_contacts
+			[show_radio_buttons]=show_radio_buttons
+			(add_to_current_contacts)="add_contact_handler($event)">
+		</app-available-contacts>
+	</div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around center" fxShow="false" fxShow.lt-md class="contacts">
+	<div fxFlex="80" fxFill>
+		<app-current-contacts 
+			(show_radio_buttons)="show_radio_buttons_handler()" 
+			(delete_contact)="delete_contact_handler($event)" 
+			[current_contacts]=current_contacts>
+		</app-current-contacts>
+	</div>
+</div>
+<div fxLayout="column" fxShow="false" fxShow.lt-md class='main'>
+	<div fxFlex="1" fxFill class='bottom'>
+		<div fxLayout="row" fxLayoutAlign="space-around center" class="contacts">
+			<div fxFlex="40" fxFill>
+				<app-available-contacts
+					[available_contacts]=available_contacts
+					[show_radio_buttons]=show_radio_buttons
+					(add_to_current_contacts)="add_contact_handler($event)">
+				</app-available-contacts>
+			</div>
+		</div>
+	</div>
+</div>

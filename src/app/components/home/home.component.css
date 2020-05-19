@@ -1,0 +1,56 @@
+.main {
+	height: 100%;
+}
+
+.left{
+	background-color: white;
+}
+
+.right {
+	#background-color: #424242;
+}
+
+.top {
+	background-color: white;
+}
+
+.bottom {
+	#background-color: #424242;
+}
+.contacts {
+	width:100%;
+}
+
+.mat-card-title {
+	font-size:1.5rem;
+	font-weight:300;
+	margin-bottom: 2rem;
+}
+
+.contact-list .mat-list-item {
+  margin-top:0.5rem;
+  border:solid;
+  border-width:0.3px;
+  border-top-width: 0;
+  padding-top:0.2rem;
+  padding-bottom:0.3rem;
+}
+
+.mat-list-base{
+	padding-top:0;
+}
+
+mat-card {
+	margin-top:2rem;
+	margin-bottom:0.2rem;
+	background-color:#EE8068;
+	margin-bottom:0;
+}
+
+mat-card-content {
+
+	font-weight: 300;
+	font-size:1.5rem;
+	text-align:center;
+	#color: #EE8068;
+}

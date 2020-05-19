@@ -1,0 +1,25 @@
+<mat-card>
+	<mat-card-title>
+  		Autres contacts
+  	</mat-card-title>
+  	<mat-card-content>
+		<div class="no-contact"*ngIf="showList">
+			<mat-list role="list">
+			  <mat-list-item  role="listitem" *ngFor="let contact of available_contacts; let i = index">
+			  	<div fxFill fxLayout="row"  fxLayoutAlign="space-between center" >
+			  		<div class='mat-list-avatar'>
+			  		</div>
+			  		<span fxFlex="80" class="contact_name">{{contact.contact_name}}</span>
+			  		<span *ngIf="(toggle_radio_buttons)" class='radio-button' fxFlex="10">
+			    		<mat-radio-button [value]=contact.contact_id (change)="contact_id=$event.value;add_contact(contact_id)">
+			    		</mat-radio-button>
+			    	 </span>
+			    </div>
+			  </mat-list-item>
+			</mat-list>
+		</div>
+		<div class="no-contact"*ngIf="!showList">
+			Aucun contact
+		</div>
+	</mat-card-content>
+</mat-card>

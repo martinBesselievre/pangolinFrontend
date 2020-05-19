@@ -1,0 +1,73 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="register()">
+      <div class='card-header'>
+        Inscription
+      </div>
+      <div *ngIf="errorMessage" class="alert-danger">
+        {{errorMessage}}
+      </div>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Nom" formControlName="name" required>
+        <mat-error>
+          Le champ nom est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="number" placeholder="Age" formControlName="age" required>
+        <mat-error>
+          Le champ age est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Famille" formControlName="family" required>
+        <mat-error>
+           Le champ famille est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Race" formControlName="race" required>
+        <mat-error>
+           Le champ race est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="Nourriture" formControlName="food" required>
+        <mat-error>
+           Le champ nourriture est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="latitude" formControlName="latitude" required>
+        <mat-error>
+           Le champ latitude est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="text" placeholder="longitude" formControlName="longitude" required>
+        <mat-error>
+           Le champ longitude est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Mot de passe" formControlName="password" required>
+        <mat-error>
+           Le champ mot de passe est obligatoire
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Confirmation du mot de passe" formControlName="confirm_password" required>
+        <mat-error>
+           Le champ confirmation du mot de passe est obligatoire
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">S'inscrire</button>
+    </form>
+    <div class='login-link'>
+        <a [routerLink]="['/login']" class="btn btn-link">Déja inscrit? Connexion</a>
+      </div>
+  </mat-card-content>
+</mat-card>
+
+

@@ -1,0 +1,28 @@
+.main {
+	width:100%;
+}
+
+.content {
+}
+
+.left{
+	background-color: pink;
+}
+
+.right{
+	padding-left: 0.5rem;
+	min-width: 13rem;
+}
+
+
+.avatar-wrapper {
+	#padding-top: 0.5rem;
+	#padding-bottom: 0.5rem;
+}
+.avatar {
+  height: 3.5rem;
+  width: 3.5rem;
+  #background-color: #EE8068;
+   background-color: #424242;
+  border-radius: 50%;
+}

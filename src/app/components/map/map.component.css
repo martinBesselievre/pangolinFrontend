@@ -1,0 +1,17 @@
+.fill-page {
+  width:100vw;
+  height:100vh;
+}
+
+mat-card {
+  max-width: 80vw;
+  margin: 0vh auto;
+  text-align: center;
+}
+
+.card-header {
+  font-weight:300;
+  font-size:1.5rem;
+  color:#ea4c22;
+  padding-bottom: 1rem;
+}

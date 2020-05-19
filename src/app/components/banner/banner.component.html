@@ -1,0 +1,51 @@
+<mat-toolbar class="expanded-toolbar">
+  <span>
+    <button mat-button class='brand'routerLink="/"> 
+      <img src="https://www.appartoo.com/public/assets/appartooLogo.png"/>
+      <span class='brand-detail'>Pangolins</span>
+    </button>
+  </span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <div *ngIf="authenticated">
+    	<button mat-button routerLink="/map" *ngIf="authenticated">
+	    	<span class='menu-item'>Localisation</span>
+		</button>
+	    <button mat-button [matMenuTriggerFor]="belowMenu">
+	    	<mat-icon>account_circle</mat-icon>
+	    	<span class='user'>{{username}}</span>
+		</button>
+	</div>
+	<mat-menu #belowMenu="matMenu" yPosition="below">
+  		<button mat-menu-item routerLink="/profile">Profil</button>
+  		<button mat-menu-item (click)="logout()">Déconnexion</button>
+	</mat-menu>
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+	<div class='user-dropdown' *ngIf="authenticated" >
+		<span>{{username}}</span>
+	</div>
+	<button mat-menu-item routerLink="/home" *ngIf="authenticated">
+	   <span class='menu-item'>Home</span>
+	</button>
+	<button mat-menu-item routerLink="/login" *ngIf="!authenticated">
+	   <span class='menu-item'>Connexion</span>
+	</button>
+	<button mat-menu-item routerLink="/register" *ngIf="!authenticated">
+	   <span class='menu-item'>Inscription</span>
+	</button>
+	<button mat-menu-item routerLink="/map" *ngIf="authenticated">
+	    <span class='menu-item'>Localisation</span>
+	</button>
+	<button mat-menu-item routerLink="/profile" *ngIf="authenticated">
+	    <span class='menu-item'>Profil</span>
+	</button>
+	<button mat-button *ngIf="authenticated" (click)="logout()">
+	    <span class='menu-item'>Déconnexion</span>
+	</button>
+</mat-menu>
+
+

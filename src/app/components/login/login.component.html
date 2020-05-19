@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-content>
+      <div class='card-header'>
+        Connexion
+      </div>
+      <div *ngIf="errorMessage" class="alert-danger">
+        {{errorMessage}}
+      </div>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Nom" formControlName="name" required>
+          <mat-error>
+            Le champ  nom est obligatoire
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Mot de passe" formControlName="password" required>
+          <mat-error>
+           Le champ  nom est obligatoire
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Se connecter</button>
+      </form>
+      <div class='register-link'>
+        <a [routerLink]="['/register']" class="btn btn-link">Pas encore inscrit? Inscription</a>
+      </div>
+    </mat-card-content>
+</mat-card>
